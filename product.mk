@@ -1,3 +1,8 @@
+# Disable Lawnchair if GMS is not enabled
+ifeq ($(strip $(WITH_GMS)),false)
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := false
+endif
+
 # Lawnchair
 TARGET_PREBUILT_LAWNCHAIR_LAUNCHER ?= true
 ifeq ($(strip $(TARGET_PREBUILT_LAWNCHAIR_LAUNCHER)),true)
